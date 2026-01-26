@@ -50,12 +50,12 @@ let jsonData = JSON.parse(data);
 
 let result = jsonData.students.filter(function(student){
   return student.score >= 80;
-})
+});
 
 let result2 = result.map(function(student){
   return {
     result: `${student.name}(${student.score})`
   }
-})
+});
 
 console.log(result2);
