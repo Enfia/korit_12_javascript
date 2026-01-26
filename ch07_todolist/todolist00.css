@@ -1,0 +1,143 @@
+/* 기본 리셋 */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Hiragino Kaku Gothic Pro', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #5f5f5f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 메인 카드 */
+.container {
+  width: 380px;
+  padding: 30px;
+  background: linear-gradient(135deg, #2b2b2b, #3a3a3a);
+  border-radius: 24px;
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.45);
+  text-align: center;
+}
+
+/* 제목 */
+h1 {
+  margin: 0;
+  color: #ffb6c1;
+  font-size: 30px;
+  text-shadow: 0 0 10px rgba(255, 182, 193, 0.9);
+}
+
+.subtitle {
+  margin: 8px 0 24px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* 입력 영역 */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: #fff0f6;
+}
+
+#add-btn {
+  width: 44px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#add-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255, 182, 193, 0.9);
+}
+
+/* 리스트 */
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ⭐ li 하나하나 = 퀘스트 카드 */
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  animation: fadeIn 0.25s ease;
+}
+
+/* 체크박스 */
+.todo-item input[type="checkbox"] {
+  accent-color: #ffb6c1;
+  cursor: pointer;
+}
+
+/* 텍스트 */
+.todo-text {
+  flex: 1;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* 삭제 버튼 */
+.delete-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffb6c1;
+  transition: transform 0.15s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.3);
+}
+
+/* 완료 상태 */
+.todo-item.completed {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+/* 하단 */
+.footer-text {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #ffdee9;
+  opacity: 0.8;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
