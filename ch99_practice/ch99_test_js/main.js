@@ -1,22 +1,25 @@
-let price1 = 10000;
-let qty1 = 2;
-let price2 = 5000;
-let qty2 = 1;
+// 3. 다음 코드에서 map 메서드가 예상과 다른 결과를 반환하는 이유를 설명하고, 올바르게 수정하시오.
 
-let total = 0;
+const users = [
+    { id: 1, name: "이성계" },
+    { id: 2, name: "이방과" },
+    { id: 3, name: "이방원" }
+];
 
-// 1. 상품1 금액 계산
-total = price1 * qty1;  
+const userMap = users.map(function(user){
+  return {
+    userId: user.id *2
+  }
+})
 
-// 2. 상품2 금액 계산
-total += price2 * qty2; 
+for(const user of userMap){
+  console.log(user);
+}
+console.log(users);           // 예상 결과: [{ id: 1, name: "이성계" }, { id: 2, name: "이방과" }, { id: 3, name: "이방원" }]
 
-// 3. 결과 출력
-console.log("총 금액: " + total + "원"); 
 
-// (가) - 위 (1), (2), (3) 코드 중 몇 번이 오류가 있는지 고르시오. (15점)
-// (나) - (가)에서 고른 코드를 수정하시오. (15점)
-// 답)
+// - 요구사항
 
-// (가) -
-// (나) -
+// 위 코드에서 map 메서드가 예상한 대로 동작하지 않는 이유를 설명하시오.
+
+// users 배열을 변경하지 않으면서 새로운 배열을 생성하도록 코드를 수정하시오.
